@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "100274212654",
+    "firebase_url": "https://autismdetection.firebaseio.com",
+    "project_id": "autismdetection",
+    "storage_bucket": "autismdetection.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:100274212654:android:f3343f2d5fabc1d268f4bf",
+        "android_client_info": {
+          "package_name": "com.example.autism"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "100274212654-q9e6u4arr7g5l4rkgfek4ib7lk4jcu9f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTDg2yjR1A0m9ppgl0XoNcPg9yYs3pM7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "100274212654-q9e6u4arr7g5l4rkgfek4ib7lk4jcu9f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "100274212654-o1df34k4873sjrvl4gtqlgo7c442ehjo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ecuai.autismdetection"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
