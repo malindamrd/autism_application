@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/malindadeshapriya/Documents/Flutter/autism/autism/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "/Users/malindadeshapriya/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/478e9bced4014de53d13c136a3715b78/res/values-v21/values-v21.xml",

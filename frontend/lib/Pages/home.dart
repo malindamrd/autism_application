@@ -1,5 +1,6 @@
 import 'dart:ffi';
 
+import 'package:autism/Pages/questionnaire.dart';
 import 'package:autism/Setup/signin.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +52,12 @@ class _HomeState extends State<Home> {
                       child: Opacity(
                         opacity: 0.8,
                         child: RaisedButton(
-                          onPressed: signOut,
+                          onPressed: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Questionnaire()),
+                            );
+                          },
                           child: Text('Questionnaire'),
                         ),
                       ),
@@ -88,5 +94,9 @@ class _HomeState extends State<Home> {
     FirebaseAuth.instance.signOut().then((onValue) {
       return LoginPage();
     });
+  }
+
+  Future<void> goToQuestionnaire() async{
+    return Questionnaire();
   }
 }

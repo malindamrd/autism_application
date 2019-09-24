@@ -1,27 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/malindadeshapriya/Documents/Flutter/autism/autism/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
-                {
-                    "source": "/Users/malindadeshapriya/Documents/Flutter/autism/autism/android/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "347"
-                    },
-                    "to": {
-                        "startLines": "119",
-                        "startColumns": "4",
-                        "startOffsets": "7926",
-                        "endLines": "123",
-                        "endColumns": "12",
-                        "endOffsets": "8218"
-                    }
-                },
                 {
                     "source": "/Users/malindadeshapriya/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/6c5117caad41fc62dfcbe98cee1f5853/res/values/values.xml",
                     "from": {
@@ -78,20 +59,22 @@
                     }
                 },
                 {
-                    "source": "/Users/malindadeshapriya/Documents/Flutter/autism/autism/build/app/generated/res/google-services/debug/values/values.xml",
+                    "source": "/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/android/app/src/main/res/values/styles.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,309,391,495,604,724,823",
-                        "endColumns": "143,109,81,103,108,119,98,75",
-                        "endOffsets": "194,304,386,490,599,719,818,894"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "347"
                     },
                     "to": {
-                        "startLines": "110,111,112,113,114,115,116,117",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "7011,7155,7265,7347,7451,7560,7680,7779",
-                        "endColumns": "143,109,81,103,108,119,98,75",
-                        "endOffsets": "7150,7260,7342,7446,7555,7675,7774,7850"
+                        "startLines": "119",
+                        "startColumns": "4",
+                        "startOffsets": "7926",
+                        "endLines": "123",
+                        "endColumns": "12",
+                        "endOffsets": "8218"
                     }
                 },
                 {
@@ -109,6 +92,23 @@
                         "startOffsets": "908,997,1126,4480,8541,8717,8839,9101,9296",
                         "endColumns": "88,70,72,59,65,121,60,65,66",
                         "endOffsets": "992,1063,1194,4535,8602,8834,8895,9162,9358"
+                    }
+                },
+                {
+                    "source": "/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/generated/res/google-services/debug/values/values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,309,391,495,604,724,823",
+                        "endColumns": "143,109,81,103,108,119,98,75",
+                        "endOffsets": "194,304,386,490,599,719,818,894"
+                    },
+                    "to": {
+                        "startLines": "110,111,112,113,114,115,116,117",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "7011,7155,7265,7347,7451,7560,7680,7779",
+                        "endColumns": "143,109,81,103,108,119,98,75",
+                        "endOffsets": "7150,7260,7342,7446,7555,7675,7774,7850"
                     }
                 }
             ]
