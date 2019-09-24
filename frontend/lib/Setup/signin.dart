@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
             TextFormField(
               validator: (input){
                 if(input.isEmpty){
-                  return 'Pleassse type an email';
+                  return 'Please type an email';
                 }
               },
               onSaved: (input) => _email = input ,
