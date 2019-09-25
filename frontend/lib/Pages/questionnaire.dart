@@ -1,3 +1,5 @@
+import 'package:autism/Pages/result.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -7,10 +9,20 @@ class Questionnaire extends StatefulWidget {
 }
 
 class _Questionnaire extends State<Questionnaire> {
+  var txt = TextEditingController();
+  int count = 0;
+  var answers_list = new List(21);
+  void initState() {
+    loadQuestion(count);
+    count += 1;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
+
     return MaterialApp(
       title: 'Flutter layout demo',
       home: Scaffold(
@@ -31,11 +43,12 @@ class _Questionnaire extends State<Questionnaire> {
               child: Column(
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(8.0, 10, 8.0, 40), 
-                    child: Text(
-                      'Question Goes Here',
-                      style: TextStyle(
-                          fontSize: 20.0, fontWeight: FontWeight.bold),
+                    padding: const EdgeInsets.fromLTRB(8.0, 10, 8.0, 40),
+                    child: TextField(
+                      maxLines: null,
+                      controller: txt,
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                   ),
                   Padding(
@@ -48,11 +61,7 @@ class _Questionnaire extends State<Questionnaire> {
                             opacity: 0.8,
                             child: RaisedButton(
                               onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Questionnaire()),
-                                );
+                                saveAnswer('answer');
                               },
                               child: Text('Yes'),
                             ),
@@ -64,11 +73,7 @@ class _Questionnaire extends State<Questionnaire> {
                             opacity: 0.8,
                             child: RaisedButton(
                               onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Questionnaire()),
-                                );
+                                saveAnswer('answer');
                               },
                               child: Text('No'),
                             ),
@@ -104,7 +109,32 @@ class _Questionnaire extends State<Questionnaire> {
     );
   }
 
-  Future<void> loadQuestion() async{
-    
+  void loadQuestion(countt) {
+    if (countt < 21) {
+      String question = "q" + (countt + 1).toString();
+      print(question);
+      Firestore.instance
+          .collection('questions')
+          .document(question)
+          .get()
+          .then((strding) {
+        print(strding['text']);
+
+        txt.text = strding['text'];
+      });
+    } else {
+      print(answers_list);
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => ResultPage()),
+      );
+    }
+  }
+
+  void saveAnswer(answer) {
+    answers_list[count-1] = answer;
+    print(count);
+    loadQuestion(count);
+    count++;
   }
 }
