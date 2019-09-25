@@ -1,7 +1,10 @@
 import 'package:autism/Pages/result.dart';
+import 'package:autism/class/answers.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'home.dart';
 
 class Questionnaire extends StatefulWidget {
   @override
@@ -38,7 +41,7 @@ class _Questionnaire extends State<Questionnaire> {
             Container(
               height: height / 2,
               decoration: BoxDecoration(
-                color: const Color(0xffb39ddb),
+                // rcolor: const Color(0xffb39ddb),
               ),
               child: Column(
                 children: <Widget>[
@@ -61,7 +64,7 @@ class _Questionnaire extends State<Questionnaire> {
                             opacity: 0.8,
                             child: RaisedButton(
                               onPressed: () {
-                                saveAnswer('answer');
+                                saveAnswer(1);
                               },
                               child: Text('Yes'),
                             ),
@@ -73,8 +76,9 @@ class _Questionnaire extends State<Questionnaire> {
                             opacity: 0.8,
                             child: RaisedButton(
                               onPressed: () {
-                                saveAnswer('answer');
+                                saveAnswer(2);
                               },
+                              color: const Color(0xFF006F50),
                               child: Text('No'),
                             ),
                           ),
@@ -88,9 +92,11 @@ class _Questionnaire extends State<Questionnaire> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Questionnaire()),
+                                      builder: (context) => Home()),
                                 );
+                                
                               },
+                              color: const Color(0xFF964B40),
                               child: Text(
                                 'Exit',
                               ),
@@ -123,17 +129,18 @@ class _Questionnaire extends State<Questionnaire> {
         txt.text = strding['text'];
       });
     } else {
-      print(answers_list);
+      
+      Answers an = new Answers(answers_list);
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => ResultPage()),
+        MaterialPageRoute(builder: (context) => ResultPage(ans: an,)),
       );
     }
   }
 
   void saveAnswer(answer) {
     answers_list[count-1] = answer;
-    print(count);
+    print(answers_list);
     loadQuestion(count);
     count++;
   }
