@@ -35,7 +35,7 @@ class _Questionnaire extends State<Questionnaire> {
               //margin: const EdgeInsets.only(top: 100),
               height: height / 2,
               decoration: BoxDecoration(
-                color: const Color(0xff7c94b6),
+                // color: const Color(0xff7c94b6),
               ),
             ),
             Container(
