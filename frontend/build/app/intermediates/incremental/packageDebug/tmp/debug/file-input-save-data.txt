@@ -1,14 +1,14 @@
 #Internal package file, do not edit.
-#Thu Sep 26 00:30:49 AWST 2019
+#Mon Oct 21 21:26:12 AWST 2019
 4.path=flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
 13.baseType=DIRECTORY
-8.set=ASSET
+8.set=NATIVE_RESOURCE
 6.path=flutter_assets/isolate_snapshot_data
 0.baseType=DIRECTORY
 10.path=flutter_assets/vm_snapshot_data
 5.baseType=DIRECTORY
 1.base=/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
-8.path=flutter_assets/fonts/MaterialIcons-Regular.ttf
+8.path=lib/arm64-v8a/libflutter.so
 12.path=flutter_assets/FontManifest.json
 3.base=/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/transforms/dexMerger/debug/0
 14.path=flutter_assets/LICENSE
@@ -17,7 +17,7 @@
 5.base=/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
 7.base=/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
 11.base=/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/transforms/dexMerger/debug/0
-9.base=/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/transforms/mergeJniLibs/debug/0
+9.base=/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
 13.base=/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
 1.baseType=DIRECTORY
 11.set=DEX
@@ -39,7 +39,7 @@
 0.base=/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/transforms/dexMerger/debug/0
 7.path=flutter_assets/assets/background.jpg
 11.path=classes2.dex
-9.path=lib/armeabi-v7a/libflutter.so
+9.path=flutter_assets/fonts/MaterialIcons-Regular.ttf
 6.set=ASSET
 2.base=/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/transforms/mergeJniLibs/debug/0
 13.path=flutter_assets/assets/background.png
@@ -50,12 +50,12 @@
 6.base=/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
 10.base=/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
 13.set=ASSET
-8.base=/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
+8.base=/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/transforms/mergeJniLibs/debug/0
 2.set=NATIVE_RESOURCE
 8.baseType=DIRECTORY
 12.base=/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
 14.base=/Users/malindadeshapriya/Documents/Flutter/autism/autism/frontend/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
-9.set=NATIVE_RESOURCE
+9.set=ASSET
 count=16
 12.baseType=DIRECTORY
 4.baseType=DIRECTORY

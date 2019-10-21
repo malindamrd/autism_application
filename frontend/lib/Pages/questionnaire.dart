@@ -13,6 +13,9 @@ class Questionnaire extends StatefulWidget {
 
 class _Questionnaire extends State<Questionnaire> {
   var txt = TextEditingController();
+  
+  var img = TextEditingController();
+  
   int count = 0;
   var answers_list = new List(21);
   void initState() {
@@ -32,17 +35,17 @@ class _Questionnaire extends State<Questionnaire> {
         body: Column(
           children: <Widget>[
             Container(
-              //margin: const EdgeInsets.only(top: 100),
-              height: height / 2,
-              decoration: BoxDecoration(
-                // color: const Color(0xff7c94b6),
-              ),
+              margin: const EdgeInsets.only(top: 50),
+              child: Image.network(
+                  img.text.toString(),
+                  height: 250,
+                  fit: BoxFit.fill),
             ),
             Container(
               height: height / 2,
               decoration: BoxDecoration(
-                // rcolor: const Color(0xffb39ddb),
-              ),
+                  // rcolor: const Color(0xffb39ddb),
+                  ),
               child: Column(
                 children: <Widget>[
                   Padding(
@@ -94,7 +97,6 @@ class _Questionnaire extends State<Questionnaire> {
                                   MaterialPageRoute(
                                       builder: (context) => Home()),
                                 );
-                                
                               },
                               color: const Color(0xFF964B40),
                               child: Text(
@@ -124,22 +126,29 @@ class _Questionnaire extends State<Questionnaire> {
           .document(question)
           .get()
           .then((strding) {
-        print(strding['text']);
-
+        // print(strding['text']);
+        // print(strding['image']);
+        
         txt.text = strding['text'];
+        img.text = strding['image'];
+
+        print(img.text.toString());
+        //imageToShow = strding['image'];
+        
+       
       });
     } else {
-      
       Answers an = new Answers(answers_list);
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => ResultPage(ans: an,)),
+        MaterialPageRoute(builder: (context) => ResultPage()),
+        
       );
     }
   }
 
   void saveAnswer(answer) {
-    answers_list[count-1] = answer;
+    answers_list[count - 1] = answer;
     print(answers_list);
     loadQuestion(count);
     count++;
