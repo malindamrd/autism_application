@@ -30,8 +30,9 @@ public class Predict {
 	
 	String input;
 	
-	String datasetpath ="/autism_backend/src/result/New4_diagnosis+PASS.nominal.arff";
-	String modelpath = "/autism_backend/src/result/RandomTree.model";
+	
+	String datasetpath ="/Users/malindadeshapriya/Documents/Flutter/autism/autism/backend/autism_backend/src/result/New4_diagnosis+PASS.nominal.arff";
+	String modelpath = "/Users/malindadeshapriya/Documents/Flutter/autism/autism/backend/autism_backend/src/result/RandomTree.model";
 
 	public Predict(String input) {
 		this.input = input;
@@ -57,8 +58,11 @@ public class Predict {
 		
 		DataSource source = new DataSource(
 				datasetpath);
+		
 		Instances data = source.getDataSet();
+		System.out.println(source);
 		data.setClass(data.attribute("Diagnosis"));
+		
 
 		Classifier cModel = (Classifier) new RandomTree();
 		cModel.buildClassifier(data);//building the classifier

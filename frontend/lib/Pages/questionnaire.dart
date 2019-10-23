@@ -139,9 +139,13 @@ class _Questionnaire extends State<Questionnaire> {
       });
     } else {
       Answers an = new Answers(answers_list);
+      print(an.getArray());
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => ResultPage()),
+              new MaterialPageRoute(
+                  builder: (__) => new ResultPage(myObject:an))
+        // context,
+        // MaterialPageRoute(builder: (context) => ResultPage(answers:an)),
         
       );
     }

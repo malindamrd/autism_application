@@ -14,12 +14,12 @@ import javax.ws.rs.core.Application;
 @Path("/getResult")
 public class Result {
 
-	@GET
-	@Produces(MediaType.TEXT_HTML)
-	public String sayHello() {
-		String res = "<h1> Hi Im Malinda</h2>";
-		return res;
-	}
+//	@GET
+//	@Produces(MediaType.TEXT_HTML)
+//	public String sayHello() {
+//		String res = "<h1> Hi Im Malinda</h2>";
+//		return res;
+//	}
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -56,6 +56,7 @@ public class Result {
 		
 		Gson json = new Gson();
 		String res = json.toJson(pr);
+		System.out.println(res);
 		return res;
 	}
 	
